@@ -31,14 +31,14 @@ export default defineNuxtConfig({
     optimizeDeps: {
       exclude: ['@coderline/alphatab']
     },
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            alphatab: ['@coderline/alphatab']
-          }
-        }
-      }
-    }
+   // build: {
+    //  rollupOptions: {
+      //  output: {
+       //   manualChunks: {
+        //    alphatab: ['@coderline/alphatab']
+        //  }
+       // }
+     // }
+   // }
   }
 })
