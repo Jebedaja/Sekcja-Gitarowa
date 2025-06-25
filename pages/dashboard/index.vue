@@ -50,7 +50,7 @@
           <span class="text-gray-300">Testowanie AlphaTab</span>
         </NuxtLink>
 
-        <!-- NOWY KAFELEK: Metronom -->
+        <!-- KAFEELEK: Metronom -->
         <NuxtLink 
           to="/dashboard/metronome" 
           class="p-6 bg-blue-600 hover:bg-blue-500 shadow rounded hover:shadow-lg flex flex-col justify-center items-center text-white transition-colors duration-200"
@@ -60,7 +60,7 @@
           <span class="text-gray-200">Ustaw tempo do ćwiczeń</span>
         </NuxtLink>
         
-        <!-- Miejsce na przyszły kafelek Stroika -->
+        <!-- kafelek Stroika -->
         <NuxtLink 
           to="/dashboard/tuner" 
           class="p-6 bg-green-600 hover:bg-green-500 shadow rounded hover:shadow-lg flex flex-col justify-center items-center text-white transition-colors duration-200"
@@ -70,6 +70,15 @@
           <span class="text-gray-200">Precyzyjne strojenie instrumentu</span>
         </NuxtLink>
 
+        <NuxtLink 
+          v-if="userRole === 'admin'"
+          to="/dashboard/user_management" 
+          class="p-6 bg-purple-600 hover:bg-purple-500 shadow rounded hover:shadow-lg flex flex-col justify-center items-center text-white transition-colors duration-200"
+        >
+          <span class="text-2xl mb-2">⚙️</span> <span class="text-xl font-semibold mb-2">Zarządzanie Użytkownikami</span>
+          <span class="text-gray-200">Panel administracyjny</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
@@ -77,8 +86,11 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports'
+import { useUserRole } from '~/composables/useUserRole'
 
 definePageMeta({
   layout: 'default' // tutaj mamy nav-bar
 })
+
+const userRole = useUserRole();
 </script>
