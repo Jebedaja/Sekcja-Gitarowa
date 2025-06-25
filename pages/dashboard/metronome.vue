@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-8">Metronom</h1>
+  <div class="flex flex-col items-center min-h-screen bg-gray-100 p-4 pt-8">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-16">Metronom</h1>
 
     <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full text-center space-y-6">
       <!-- Wyświetlanie BPM -->
